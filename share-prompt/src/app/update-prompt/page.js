@@ -53,9 +53,5 @@ const EditPage = () => {
     />
   );
 };
-const UpdatePage = () => {
-  <Suspense>
-    <EditPage />
-  </Suspense>;
-};
-export default UpdatePage;
+
+export default EditPage;
