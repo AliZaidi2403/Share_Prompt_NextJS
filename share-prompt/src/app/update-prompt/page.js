@@ -3,7 +3,7 @@ import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@/components/Form";
 
-function EditPage() {
+const EditPage = () => {
   const searchParams = useSearchParams();
   const promptID = searchParams.get("id");
   const [submitting, setSubmitting] = useState(false);
@@ -52,9 +52,10 @@ function EditPage() {
       handleSubmit={updatePrompt}
     />
   );
-}
-<Suspense>
-  <EditPage />
-</Suspense>;
-
-export default EditPage;
+};
+const UpdatePage = () => {
+  <Suspense>
+    <EditPage />
+  </Suspense>;
+};
+export default UpdatePage;
